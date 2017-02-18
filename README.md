@@ -1,18 +1,21 @@
 MacDownTinkerPlugin README
 ==========================
 
+The usefulness of the `MacDownTinkerPlugin ` is simply to explore what interaction is possible between the [MacDown](https://github.com/MacDownApp/macdown) and a Swift based plugin.
+
 Current MacDown Plugin Limitations
 ----------------------------------
 
-This Swift plugin with MacDown 0.6.4 has the found the following MacDown behavior at the time of this writing:
+The Swift MacDownTinkerPlugin plugin has the found to have the following interaction with MacDown 0.6.4 behavior at the time of this writing:
 
 1. Swift needs to access the MacDown `markdown` text with `document.value(forKey: "markdown") as? String`.  (See `document.attributeKeys` for the other keys.)
-2. Changing the `markdown` content via the plugin does write to the document markdown editor. 
+2. Changing the `markdown` content via the plugin **does write** to the document markdown editor content. 
 3. Changing the `markdown` content via the plugin does not have an undo.
 4. Changing the `markdown` content via the plugin does not have the document transition to a needs-to-be-saved state.
 6. `isDocumentEdited` is currently read only, so the plugin cannot directly mark the document as changed.
 6. The html does not re-render without either making a subsequent manual markdown edit, or selecting the menu item View > Render HTML.
 7. Writing to the `fileURL` does not automatically update into the markdown editor.
+8. Do not see an implemented mechanism for processing only the selected markdown text.
 
 
 How To Create a Swift Plugin for MacDown
