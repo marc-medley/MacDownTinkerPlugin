@@ -1,5 +1,4 @@
-MacDownTinkerPlugin README
-==========================
+# MacDownTinkerPlugin README
 
 The usefulness of the `MacDownTinkerPlugin ` is simply to explore what interaction is possible between the [MacDown](https://github.com/MacDownApp/macdown) and a Swift based plugin.
 
